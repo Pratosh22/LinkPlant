@@ -84,7 +84,7 @@ h1 {
   }
   @keyframes typewriter{
     from{width: 0;}
-    to{width: 10.1em;}
+    to{width: 288px;}
   }
   @keyframes blinkTextCursor{
     from{border-right-color: rgba(255,255,255,.75);}
