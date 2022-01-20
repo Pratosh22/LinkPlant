@@ -1,46 +1,51 @@
-body {
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
-  position:fixed;
-  
+*{
+  box-sizing: border-box;
 }
-h1 {
-  font-family: "Sacramento", cursive;
-  font-size: 100px;
-  font-weight: bolder;
-  color:#2B2B28
+body{
+  background-image: url(../Images/bg3.webp);
+  background-repeat: no-repeat;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+h1{
+  font-family: "Sacramento";
+  font-size:4rem;
+  text-align: center;
+  margin:0.625rem 0.625rem;
+  padding-top:5px;
 }
 
-.top-container {
-  position: relative;
-}
-.bg{
-    position: relative;
-  
-}
 .me{
-    position: absolute;
-    bottom: 80%;
-    width:60%;
-    left:80px;
+  border-radius: 100%;
+  width:13rem;
 }
-.bio{
-    font-size:25px;
-    color:#2B2B28;
+.image-me{
+  text-align: center;
 }
-.Links-container {
-    width:900px;
-    height:800px;
-    position:absolute;
-    bottom:-35%;
-    left:60%;
-    transform: translate(-50%, -50%);
+
+h2{
+  text-align: center;
+  font-family: "Montserrat";
+  font-weight: 600;
+  margin-bottom:2rem;
 }
-.center {
-  position: absolute;
-  bottom: 48%;
-  left: 48%;
-  transform: translate(-50%, -50%);
+.links-container{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding:3em;
+  width:20rem;
+  height:10rem;
+}
+.link{
+  display:flex;
+  flex-direction: column;
+  width:30rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
 .link-box {
@@ -49,7 +54,6 @@ h1 {
   border: 2px solid white;
   border-radius: 8px;
   margin: 1em;
-  width: 50%;
   padding: 1em;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -59,34 +63,37 @@ h1 {
   text-decoration: none;
   color: #212121;
   transition: all 0.15s ease-in;
+  font-family: "Montserrat";
 }
+
 .link-box:hover {
     opacity: 1;
     background-color: yellow;
 }
+.line-1{
+  border-right: 2px solid rgba(255,255,255,.75);
+  font-size: 180%;
+  white-space: nowrap;
+  overflow: hidden;
+  bottom:80px;
+}
 
-  
-  .line-1{
-    position: relative;
-    border-right: 2px solid rgba(255,255,255,.75);
-    font-size: 180%;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    color:#2B2B28;
-    bottom:80px;
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 1.5s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 18.5rem;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(0, 0, 0, 0.75);}
+  to{border-right-color: transparent;}
+}
+
+@media (max-width: 768px) {
+  body{
+    background-repeat:no-repeat;
   }
-  
-  /* Animation */
-  .anim-typewriter{
-    animation: typewriter 2s steps(44) 1s 1 normal both,
-               blinkTextCursor 500ms steps(44) infinite normal;
-  }
-  @keyframes typewriter{
-    from{width: 0;}
-    to{width: 288px;}
-  }
-  @keyframes blinkTextCursor{
-    from{border-right-color: rgba(255,255,255,.75);}
-    to{border-right-color: transparent;}
-  }
+}
