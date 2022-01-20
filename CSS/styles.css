@@ -93,6 +93,5 @@ h2{
 @media (max-width: 768px) {
   body{
     background-repeat:no-repeat;
-    background-size: cover;
   }
 }
