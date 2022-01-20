@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 body{
-  background-image: url(../images/bg3.webp);
+  background-image: url(../Images/bg3.webp);
   background-repeat: no-repeat;
   display:flex;
   align-items: center;
